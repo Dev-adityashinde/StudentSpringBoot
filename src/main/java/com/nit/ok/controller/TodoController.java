@@ -31,7 +31,7 @@ public class TodoController {
 	@Autowired
 	private TodoService service;
 	
-	@GetMapping("/todos")
+	@GetMapping("/todos")//get All Entitiies
 	public ResponseEntity<?> getAlltodos()
 	{
 		List<TodoApp> todos=repo.findAll();
