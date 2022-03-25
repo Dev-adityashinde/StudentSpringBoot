@@ -8,7 +8,6 @@ import javax.validation.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.nit.ok.exception.CustomExe;
 import com.nit.ok.model.TodoApp;
 import com.nit.ok.repositary.Repo;
 
@@ -19,13 +18,13 @@ public class TodoServiceImpl implements TodoService {
 	Repo repo;
 	
 	@Override
-	public void createTodo(TodoApp todo) throws ConstraintViolationException, CustomExe {
+	public void createTodo(TodoApp todo) throws NullPointerException {
 		
 		Optional<TodoApp> Optodo=repo.findByTodo(todo.getTodo());
 		
 		if(Optodo.isPresent())
 		{
-			throw new CustomExe(CustomExe.todoAlreadyexists());
+			throw new NullPointerException("Data does not exist");
 		}
 		else
 		{
