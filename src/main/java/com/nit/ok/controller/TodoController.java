@@ -41,7 +41,7 @@ public class TodoController {
 		}
 		else
 		{
-			return new ResponseEntity<>("no todos avaialbe ", HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>("todos are not available ", HttpStatus.NOT_FOUND);
 		}
 	}
 	
