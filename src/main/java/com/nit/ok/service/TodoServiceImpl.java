@@ -24,7 +24,7 @@ public class TodoServiceImpl implements TodoService {
 		
 		if(Optodo.isPresent())
 		{
-			throw new NullPointerException("Data does not exist");
+			throw new NullPointerException("Data not exist");
 		}
 		else
 		{

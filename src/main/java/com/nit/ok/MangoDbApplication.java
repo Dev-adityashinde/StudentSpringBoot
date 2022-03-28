@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MangoDbApplication {
 
 	public static void main(String[] args) {
+		System.out.println("enterance of application ");
 		SpringApplication.run(MangoDbApplication.class, args);
 	}
 
